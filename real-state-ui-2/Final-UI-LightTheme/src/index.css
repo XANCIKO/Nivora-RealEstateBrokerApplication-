@@ -1,0 +1,69 @@
+:root {
+  --ink-900: #132235;
+  --ink-700: #3f556f;
+  --ink-600: #647a91;
+  --teal-700: #127f72;
+  --bg-100: #f3f8ff;
+  --bg-200: #e7f0fa;
+
+  font-family: 'Lucida Sans', 'Gill Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background:
+    radial-gradient(circle at 86% 10%, rgba(253, 169, 92, 0.18), transparent 34%),
+    radial-gradient(circle at 12% 84%, rgba(94, 165, 255, 0.16), transparent 38%),
+    linear-gradient(165deg, #f6fbff 0%, #eef5fc 52%, #e8f0fa 100%);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: transparent;
+}
+
+#root {
+  min-height: 100vh;
+  background: transparent;
+}
+
+::selection {
+  background: rgba(60, 142, 236, 0.22);
+  color: #132235;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(52, 126, 214, 0.62) rgba(219, 231, 245, 0.95);
+}
+
+/* Chromium */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(219, 231, 245, 0.95);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(76, 151, 236, 0.92), rgba(37, 103, 182, 0.92));
+  border-radius: 999px;
+  border: 2px solid rgba(219, 231, 245, 0.95);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(102, 171, 250, 0.96), rgba(52, 124, 208, 0.96));
+}

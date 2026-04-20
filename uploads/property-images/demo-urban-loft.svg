@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Urban loft illustration">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#night)"/>
+  <rect x="180" y="190" width="220" height="520" rx="18" fill="#1d4ed8"/>
+  <rect x="430" y="120" width="270" height="590" rx="18" fill="#2563eb"/>
+  <rect x="735" y="240" width="210" height="470" rx="18" fill="#3b82f6"/>
+  <rect x="980" y="160" width="250" height="550" rx="18" fill="#60a5fa"/>
+  <rect x="1270" y="280" width="150" height="430" rx="18" fill="#93c5fd"/>
+  <g fill="#dbeafe">
+    <rect x="220" y="240" width="42" height="42" rx="8"/>
+    <rect x="300" y="240" width="42" height="42" rx="8"/>
+    <rect x="220" y="320" width="42" height="42" rx="8"/>
+    <rect x="300" y="320" width="42" height="42" rx="8"/>
+    <rect x="490" y="180" width="48" height="48" rx="8"/>
+    <rect x="580" y="180" width="48" height="48" rx="8"/>
+    <rect x="490" y="270" width="48" height="48" rx="8"/>
+    <rect x="580" y="270" width="48" height="48" rx="8"/>
+  </g>
+  <text x="120" y="120" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">Nivora Demo Property</text>
+  <text x="120" y="180" fill="#bfdbfe" font-family="Segoe UI, Arial, sans-serif" font-size="34">Urban Loft</text>
+</svg>

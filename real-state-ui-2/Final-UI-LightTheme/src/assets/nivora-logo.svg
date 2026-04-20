@@ -1,0 +1,25 @@
+<svg width="220" height="52" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nivoraGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8C475"/>
+      <stop offset="1" stop-color="#EF6F53"/>
+    </linearGradient>
+    <linearGradient id="nivoraTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5BD0B4"/>
+      <stop offset="1" stop-color="#2BAEA1"/>
+    </linearGradient>
+    <linearGradient id="nivoraText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38b6a5"/>
+      <stop offset="1" stop-color="#2d7de3"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(4 4)">
+    <rect x="0" y="0" width="44" height="44" rx="12" fill="#101B2B" stroke="url(#nivoraGold)" stroke-opacity="0.65"/>
+    <path d="M10 25L22 13L34 25" stroke="url(#nivoraGold)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 25V33.2C14 34.2 14.8 35 15.8 35H28.2C29.2 35 30 34.2 30 33.2V25" stroke="url(#nivoraTeal)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M18.7 35V28.9C18.7 28 19.4 27.3 20.3 27.3H23.7C24.6 27.3 25.3 28 25.3 28.9V35" stroke="url(#nivoraTeal)" stroke-width="2.2"/>
+  </g>
+
+  <text x="58" y="32" fill="url(#nivoraText)" font-family="Rockwell, Georgia, serif" font-size="30" font-weight="700" letter-spacing="0.03em">Nivora</text>
+</svg>

@@ -1,0 +1,28 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.factorypath
+.metadata/
+
+# Spring Boot secrets — never commit real credentials
+src/main/resources/application-secrets.properties
+
+# Environment files (keep only template)
+.env
+.env.*
+!.env.example
+
+# Uploaded files are local runtime artifacts.
+# Keep only curated demo SVGs under uploads/property-images in git.
+uploads/property-images/*
+!uploads/property-images/demo-*.svg
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Lakeview house illustration">
+  <rect width="1600" height="900" fill="#dff6ff"/>
+  <rect y="560" width="1600" height="340" fill="#7dd3fc"/>
+  <path d="M0 620C190 570 360 580 540 620C720 660 880 680 1040 640C1240 590 1400 560 1600 600V900H0Z" fill="#38bdf8"/>
+  <rect x="520" y="310" width="520" height="240" rx="24" fill="#ffffff"/>
+  <polygon points="470,360 780,170 1090,360" fill="#1d4ed8"/>
+  <rect x="610" y="390" width="110" height="100" rx="14" fill="#bfdbfe"/>
+  <rect x="840" y="390" width="110" height="100" rx="14" fill="#bfdbfe"/>
+  <rect x="740" y="430" width="90" height="120" rx="14" fill="#60a5fa"/>
+  <text x="120" y="120" fill="#082f49" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">Nivora Demo Property</text>
+  <text x="120" y="180" fill="#0c4a6e" font-family="Segoe UI, Arial, sans-serif" font-size="34">Lakeview House</text>
+</svg>

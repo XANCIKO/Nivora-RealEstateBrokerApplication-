@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Studio flat illustration">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect x="200" y="180" width="1200" height="560" rx="32" fill="#dbeafe"/>
+  <rect x="280" y="260" width="420" height="400" rx="22" fill="#ffffff"/>
+  <rect x="780" y="260" width="520" height="90" rx="18" fill="#60a5fa"/>
+  <rect x="780" y="390" width="420" height="70" rx="18" fill="#93c5fd"/>
+  <rect x="780" y="500" width="300" height="70" rx="18" fill="#bfdbfe"/>
+  <circle cx="490" cy="460" r="110" fill="#1d4ed8" opacity="0.22"/>
+  <text x="120" y="120" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">Nivora Demo Property</text>
+  <text x="120" y="180" fill="#2563eb" font-family="Segoe UI, Arial, sans-serif" font-size="34">Studio Flat</text>
+</svg>
