@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Payment Intent Flow</title>
+  <desc id="desc">Flow for customer payment intent creation from frontend through backend to Stripe.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 32px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .card { rx: 16; fill: #fff; stroke: #cfd8e6; stroke-width: 2; }
+      .front { fill: #e8f5ec; stroke: #78b98d; }
+      .back { fill: #e9f1ff; stroke: #7fa6e4; }
+      .stripe { fill: #fbe9ef; stroke: #d58aa5; }
+      .label { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .text { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #374867; }
+      .arrow { stroke: #2f3f61; stroke-width: 3; fill: none; marker-end: url(#a2); }
+      .note { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #2f3f61; }
+      .step { font: 700 15px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+    </style>
+    <marker id="a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2f3f61" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="620" />
+  <text class="title" x="36" y="54">Customer Payment Intent Flow</text>
+
+  <rect class="card front" x="60" y="120" width="290" height="210" />
+  <text class="label" x="90" y="162">Frontend</text>
+  <text class="text" x="90" y="192">PropertyDetails/Stripe modal</text>
+  <text class="text" x="90" y="218">Calls POST /api/payments/intent/{propId}</text>
+  <text class="text" x="90" y="244">Receives clientSecret</text>
+  <text class="text" x="90" y="270">Confirms card payment with Stripe.js</text>
+
+  <rect class="card back" x="440" y="90" width="360" height="270" />
+  <text class="label" x="470" y="132">Spring PaymentController</text>
+  <text class="step" x="470" y="164">Step 1</text>
+  <text class="text" x="530" y="164">Validate Stripe secret + property availability</text>
+  <text class="step" x="470" y="194">Step 2</text>
+  <text class="text" x="530" y="194">Calculate payable amount</text>
+  <text class="text" x="530" y="218">SALE: ~8% advance, RENT: full amount</text>
+  <text class="step" x="470" y="248">Step 3</text>
+  <text class="text" x="530" y="248">Create payment intent via Stripe API</text>
+  <text class="step" x="470" y="278">Step 4</text>
+  <text class="text" x="530" y="278">Return intent id + clientSecret + amounts</text>
+
+  <rect class="card stripe" x="900" y="120" width="250" height="210" />
+  <text class="label" x="930" y="162">Stripe API</text>
+  <text class="text" x="930" y="192">POST /v1/payment_intents</text>
+  <text class="text" x="930" y="218">amount (paise), currency=inr</text>
+  <text class="text" x="930" y="244">automatic_payment_methods=true</text>
+  <text class="text" x="930" y="270">Returns client_secret</text>
+
+  <path class="arrow" d="M350 220 L440 220" />
+  <text class="note" x="375" y="202">JWT customer request</text>
+
+  <path class="arrow" d="M800 220 L900 220" />
+  <text class="note" x="828" y="202">server-to-server</text>
+
+  <path class="arrow" d="M900 255 L800 255" />
+  <text class="note" x="821" y="282">intent response</text>
+
+  <path class="arrow" d="M440 300 L350 300" />
+  <text class="note" x="360" y="327">clientSecret + payable info</text>
+
+  <rect class="card" x="60" y="390" width="1090" height="170" />
+  <text class="label" x="90" y="430">Important Notes</text>
+  <text class="text" x="90" y="460">- `STRIPE_SECRET_KEY` must be configured on backend.</text>
+  <text class="text" x="90" y="488">- Frontend should set `VITE_STRIPE_PUBLISHABLE_KEY` to complete checkout UI.</text>
+  <text class="text" x="90" y="516">- Amount is capped safely for Stripe INR limits in sale-advance scenarios.</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Authentication and JWT Flow</title>
+  <desc id="desc">Flow diagram showing register/login, token issuance, and protected API access.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 32px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .card { rx: 16; fill: #fff; stroke: #cfd8e6; stroke-width: 2; }
+      .client { fill: #e8f5ec; stroke: #78b98d; }
+      .api { fill: #e9f1ff; stroke: #7fa6e4; }
+      .secure { fill: #fff3e0; stroke: #d7ad64; }
+      .label { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .text { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #374867; }
+      .arrow { stroke: #2f3f61; stroke-width: 3; fill: none; marker-end: url(#a); }
+      .note { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #2f3f61; }
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2f3f61" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="560" />
+  <text class="title" x="36" y="54">Authentication and JWT Access Flow</text>
+
+  <rect class="card client" x="50" y="120" width="300" height="170" />
+  <text class="label" x="80" y="162">React Frontend</text>
+  <text class="text" x="80" y="192">1) Register / Login form submit</text>
+  <text class="text" x="80" y="218">2) Stores JWT in sessionStorage</text>
+  <text class="text" x="80" y="244">3) Sends Bearer token for protected APIs</text>
+
+  <rect class="card api" x="450" y="90" width="320" height="230" />
+  <text class="label" x="480" y="132">Spring Boot Auth APIs</text>
+  <text class="text" x="480" y="162">POST /api/auth/register</text>
+  <text class="text" x="480" y="188">POST /api/auth/login</text>
+  <text class="text" x="480" y="214">JWT created on successful login</text>
+  <text class="text" x="480" y="240">JwtAuthFilter validates token per request</text>
+  <text class="text" x="480" y="266">Role checks: BROKER / CUSTOMER</text>
+
+  <rect class="card secure" x="860" y="120" width="290" height="170" />
+  <text class="label" x="890" y="162">Protected Endpoints</text>
+  <text class="text" x="890" y="192">/api/properties/** (broker)</text>
+  <text class="text" x="890" y="218">/api/deals/** (customer)</text>
+  <text class="text" x="890" y="244">/api/payments/** (customer)</text>
+
+  <path class="arrow" d="M350 180 L450 180" />
+  <text class="note" x="370" y="162">credentials</text>
+
+  <path class="arrow" d="M770 205 L860 205" />
+  <text class="note" x="790" y="187">Bearer JWT</text>
+
+  <path class="arrow" d="M860 240 L770 240" />
+  <text class="note" x="790" y="266">authorized data</text>
+
+  <rect class="card" x="50" y="350" width="1100" height="150" />
+  <text class="label" x="80" y="390">Public Endpoints (no JWT required)</text>
+  <text class="text" x="80" y="422">/api/auth/**, /uploads/**, GET /api/properties/search, GET /api/properties/{id}, GET /api/properties/{id}/broker-contact, Swagger endpoints</text>
+  <text class="text" x="80" y="452">This split enables anonymous browsing while keeping management and transaction features role-protected.</text>
+</svg>

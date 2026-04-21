@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Real Estate Platform Architecture</title>
+  <desc id="desc">High-level architecture showing frontend, backend, database, and external integrations.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .label { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .text { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #33415c; }
+      .small { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #4f5d75; }
+      .card { fill: #ffffff; stroke: #cdd6e3; stroke-width: 2; rx: 18; }
+      .frontend { fill: #e6f4ea; stroke: #7dbb91; stroke-width: 2; }
+      .backend { fill: #e7f0ff; stroke: #7fa5e3; stroke-width: 2; }
+      .db { fill: #fff2dd; stroke: #d7ab5f; stroke-width: 2; }
+      .ext { fill: #fbe9ef; stroke: #d38aa4; stroke-width: 2; }
+      .arrow { stroke: #2f3f61; stroke-width: 3; fill: none; marker-end: url(#arrowHead); }
+      .lineText { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #2f3f61; }
+    </style>
+    <marker id="arrowHead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2f3f61" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="640" />
+  <text class="title" x="40" y="60">Real Estate Capstone - System Architecture</text>
+
+  <rect class="card frontend" x="60" y="140" width="300" height="250" rx="18" />
+  <text class="label" x="90" y="185">Frontend (React + Vite)</text>
+  <text class="text" x="90" y="220">- Route navigation + auth guards</text>
+  <text class="text" x="90" y="248">- Property browse/search UI</text>
+  <text class="text" x="90" y="276">- Broker dashboard + uploads</text>
+  <text class="text" x="90" y="304">- Stripe client payment flow</text>
+  <text class="small" x="90" y="345">Runs on: http://localhost:5173</text>
+
+  <rect class="card backend" x="450" y="110" width="340" height="320" rx="18" />
+  <text class="label" x="485" y="155">Backend (Spring Boot)</text>
+  <text class="text" x="485" y="190">- REST APIs: /api/**</text>
+  <text class="text" x="485" y="218">- JWT auth + role access control</text>
+  <text class="text" x="485" y="246">- Property, deal, customer, broker modules</text>
+  <text class="text" x="485" y="274">- Payment intent creation (Stripe)</text>
+  <text class="text" x="485" y="302">- Password reset OTP (mail)</text>
+  <text class="text" x="485" y="330">- Static files served from /uploads/**</text>
+  <text class="small" x="485" y="370">Runs on: http://localhost:8080</text>
+
+  <rect class="card db" x="880" y="140" width="250" height="120" rx="18" />
+  <text class="label" x="910" y="185">MySQL Database</text>
+  <text class="text" x="910" y="215">Users, Brokers, Customers,</text>
+  <text class="text" x="910" y="238">Properties, Deals</text>
+
+  <rect class="card ext" x="880" y="300" width="250" height="170" rx="18" />
+  <text class="label" x="910" y="345">External Services</text>
+  <text class="text" x="910" y="375">- Stripe API (payments)</text>
+  <text class="text" x="910" y="403">- SMTP (OTP/reset email)</text>
+  <text class="text" x="910" y="431">- Browser client requests</text>
+
+  <path class="arrow" d="M360 255 L450 255" />
+  <text class="lineText" x="382" y="235">HTTP/JSON</text>
+
+  <path class="arrow" d="M790 200 L880 200" />
+  <text class="lineText" x="810" y="182">JPA</text>
+
+  <path class="arrow" d="M790 350 L880 350" />
+  <text class="lineText" x="807" y="332">API Calls</text>
+
+  <path class="arrow" d="M880 410 L790 410" />
+  <text class="lineText" x="808" y="392">Responses</text>
+</svg>

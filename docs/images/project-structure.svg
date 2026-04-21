@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Project Structure Diagram</title>
+  <desc id="desc">Visual map of backend, frontend, resources, and uploads folders.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .root { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .boxTitle { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .item { font: 500 15px 'Consolas', 'Courier New', monospace; fill: #33415c; }
+      .card { fill: #ffffff; stroke: #ced7e3; stroke-width: 2; rx: 16; }
+      .backend { fill: #e9f2ff; stroke: #7fa5e3; stroke-width: 2; }
+      .frontend { fill: #e9f8ef; stroke: #7dbb91; stroke-width: 2; }
+      .other { fill: #fff4e3; stroke: #d9b16c; stroke-width: 2; }
+      .line { stroke: #60708f; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760" />
+  <text class="title" x="40" y="62">Repository Structure (Visual)</text>
+  <text class="root" x="60" y="112">realestate/</text>
+
+  <rect class="card backend" x="60" y="150" width="350" height="500" rx="16" />
+  <text class="boxTitle" x="90" y="190">Backend (Spring Boot)</text>
+  <text class="item" x="90" y="228">src/main/java/com/capstone/realestate/</text>
+  <text class="item" x="110" y="256">config/</text>
+  <text class="item" x="110" y="282">controller/</text>
+  <text class="item" x="110" y="308">service/</text>
+  <text class="item" x="110" y="334">repository/</text>
+  <text class="item" x="110" y="360">entity/</text>
+  <text class="item" x="110" y="386">dto/</text>
+  <text class="item" x="90" y="424">src/main/resources/</text>
+  <text class="item" x="110" y="452">application.properties</text>
+  <text class="item" x="110" y="478">application-secrets.example.properties</text>
+  <text class="item" x="90" y="516">src/test/java/com/capstone/realestate/</text>
+  <text class="item" x="90" y="544">src/test/resources/application.properties</text>
+  <text class="item" x="90" y="582">pom.xml</text>
+
+  <rect class="card frontend" x="440" y="150" width="430" height="500" rx="16" />
+  <text class="boxTitle" x="470" y="190">Frontend (React + Vite)</text>
+  <text class="item" x="470" y="228">real-state-ui-2/Final-UI-LightTheme/</text>
+  <text class="item" x="490" y="256">src/components/</text>
+  <text class="item" x="490" y="282">src/pages/</text>
+  <text class="item" x="490" y="308">src/services/</text>
+  <text class="item" x="490" y="334">src/context/</text>
+  <text class="item" x="490" y="360">src/data/</text>
+  <text class="item" x="490" y="386">src/utils/</text>
+  <text class="item" x="490" y="424">.env.example</text>
+  <text class="item" x="490" y="452">package.json</text>
+  <text class="item" x="490" y="480">vite.config.js</text>
+  <text class="item" x="490" y="508">eslint.config.js</text>
+
+  <rect class="card other" x="900" y="150" width="250" height="500" rx="16" />
+  <text class="boxTitle" x="930" y="190">Other</text>
+  <text class="item" x="930" y="228">README.md</text>
+  <text class="item" x="930" y="256">.gitignore</text>
+  <text class="item" x="930" y="284">uploads/property-images/</text>
+  <text class="item" x="950" y="312">demo-*.svg</text>
+  <text class="item" x="930" y="340">docs/images/</text>
+  <text class="item" x="950" y="368">system-architecture.svg</text>
+  <text class="item" x="950" y="396">project-structure.svg</text>
+
+  <path class="line" d="M150 120 L150 150" />
+  <path class="line" d="M620 120 L620 150" />
+  <path class="line" d="M1020 120 L1020 150" />
+</svg>
